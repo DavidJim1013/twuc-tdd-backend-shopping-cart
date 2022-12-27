@@ -11,6 +11,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
@@ -35,4 +36,5 @@ public class ShoppingCartControllerTest extends WebApplicationTest {
                 .andExpect(jsonPath("$.products").isArray())
                 .andExpect(jsonPath("$.totalPrice").value(BigDecimal.ZERO));
     }
+
 }
